@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --avade-verde-oscuro: #697353;
+    --avade-verde-claro: #a2a685;
+    --avade-taupe: #bfb6a4;
+    --avade-beige: #d9d0bf;
+    --avade-casi-blanco: #f2f2f2;
+    --avade-marron-oscuro: #4a3f30;
+    --avade-marron-profundo: #3a2f22;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    @apply bg-avade-casi-blanco text-avade-marron-oscuro font-sans;
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif text-avade-marron-profundo;
+    line-height: 1.2;
+  }
+
+  h1 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h3 {
+    @apply text-2xl md:text-3xl;
+  }
+
+  a {
+    @apply text-avade-verde-oscuro underline-offset-2 transition-colors duration-200;
+  }
+
+  a:hover {
+    @apply text-avade-verde-hover;
+  }
+
+  p {
+    @apply text-avade-marron-oscuro;
+  }
+
+  ::selection {
+    background-color: #a2a685;
+    color: #3a2f22;
+  }
+
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-avade-verde-oscuro rounded-sm;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .section-padding {
+    @apply py-16 md:py-24;
+  }
+
+  .section-padding-sm {
+    @apply py-10 md:py-16;
+  }
+
+  /* Buttons */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-avade-verde-oscuro text-white font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-200 hover:bg-avade-verde-hover hover:border-avade-verde-hover focus-visible:outline-avade-verde-oscuro no-underline;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-avade-verde-oscuro font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-200 hover:bg-avade-verde-oscuro hover:text-white focus-visible:outline-avade-verde-oscuro no-underline;
+  }
+
+  .btn-outline-light {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-avade-casi-blanco font-sans font-semibold text-base rounded-sm border-2 border-avade-casi-blanco transition-all duration-200 hover:bg-avade-casi-blanco hover:text-avade-marron-profundo focus-visible:outline-white no-underline;
+  }
+
+  .btn-sm {
+    @apply px-4 py-2 text-sm;
+  }
+
+  /* Form elements */
+  .form-input {
+    @apply w-full px-4 py-3 bg-white border border-avade-taupe rounded-sm text-avade-marron-oscuro placeholder-avade-taupe transition-colors duration-200 focus:outline-none focus:border-avade-verde-oscuro focus:ring-2 focus:ring-avade-verde-oscuro/20;
+  }
+
+  .form-label {
+    @apply block text-sm font-semibold text-avade-marron-profundo mb-1.5 font-sans;
+  }
+
+  .form-error {
+    @apply text-sm text-red-600 mt-1;
+  }
+
+  /* Cards */
+  .card {
+    @apply bg-white border border-avade-beige rounded-sm p-6 transition-shadow duration-200 hover:shadow-md;
+  }
+
+  .card-beige {
+    @apply bg-avade-beige border border-avade-taupe rounded-sm p-6;
+  }
+
+  /* Badges */
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 text-xs font-semibold font-sans rounded-full;
+  }
+
+  .badge-green {
+    @apply badge bg-avade-verde-claro/20 text-avade-verde-oscuro;
+  }
+
+  .badge-amber {
+    @apply badge bg-amber-100 text-amber-800;
+  }
+
+  .badge-red {
+    @apply badge bg-red-100 text-red-700;
+  }
+
+  .badge-gray {
+    @apply badge bg-avade-taupe/30 text-avade-marron-oscuro;
+  }
+
+  /* Section divider */
+  .section-divider {
+    @apply border-t border-avade-beige;
+  }
+
+  /* Lock icon for private content */
+  .locked-notice {
+    @apply flex flex-col items-center justify-center text-center py-16 px-6 bg-avade-beige border border-avade-taupe rounded-sm gap-4;
+  }
+
+  /* Skip to content link */
+  .skip-link {
+    @apply absolute -top-10 left-4 z-50 px-4 py-2 bg-avade-verde-oscuro text-white text-sm font-semibold rounded-sm focus:top-4 transition-all duration-200 no-underline;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .no-underline {
+    text-decoration: none !important;
+  }
+}

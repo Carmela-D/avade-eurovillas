@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Eurovillas — La historia en viñetas</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&family=Special+Elite&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#EFE3C8;
+    --paper-dark:#E4D3AC;
+    --ink:#2B2620;
+    --terracotta:#C1502E;
+    --pine:#2F4B3C;
+    --sky:#4A8FBD;
+    --gold:#E8B339;
+    --cream-card:#FAF4E4;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(43,38,32,0.05) 1px, transparent 0);
+    background-size: 22px 22px;
+    color:var(--ink);
+    font-family:'Nunito', sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  .stamp{
+    font-family:'Special Elite', monospace;
+    letter-spacing:1px;
+    text-transform:uppercase;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero{
+    position:relative;
+    padding: 64px 20px 56px;
+    text-align:center;
+    background:var(--pine);
+    color:var(--cream-card);
+    overflow:hidden;
+    border-bottom: 10px solid var(--ink);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.04) 0 2px, transparent 2px 14px);
+    pointer-events:none;
+  }
+  .eyebrow{
+    display:inline-block;
+    font-family:'Special Elite', monospace;
+    font-size:0.78rem;
+    letter-spacing:2px;
+    text-transform:uppercase;
+    background:var(--gold);
+    color:var(--ink);
+    padding:6px 14px;
+    border-radius:3px;
+    transform:rotate(-2deg);
+    box-shadow: 2px 3px 0 rgba(0,0,0,0.25);
+    margin-bottom:22px;
+  }
+  .hero h1{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:800;
+    font-size: clamp(2.6rem, 7vw, 5rem);
+    margin: 0 0 10px;
+    line-height:0.95;
+    text-shadow: 3px 4px 0 rgba(0,0,0,0.35);
+  }
+  .hero p.sub{
+    font-size: clamp(1rem, 2.2vw, 1.3rem);
+    max-width:560px;
+    margin: 0 auto;
+    opacity:0.92;
+    font-weight:600;
+  }
+  .hero .scroll-cue{
+    margin-top:36px;
+    font-family:'Special Elite', monospace;
+    font-size:0.85rem;
+    opacity:0.8;
+    animation: bob 1.6s ease-in-out infinite;
+  }
+  @keyframes bob{ 0%,100%{transform:translateY(0);} 50%{transform:translateY(6px);} }
+
+  /* ---------- MAP STRIP ---------- */
+  .map-strip{
+    background:
+      linear-gradient(var(--sky)11, var(--sky)11),
+      repeating-linear-gradient(0deg, rgba(255,255,255,0.5) 0 1px, transparent 1px 28px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,0.5) 0 1px, transparent 1px 28px);
+    background-color:#7fb2d6;
+    color:var(--ink);
+    text-align:center;
+    padding:14px 16px;
+    font-family:'Special Elite', monospace;
+    font-size:0.82rem;
+    letter-spacing:0.5px;
+  }
+
+  /* ---------- TIMELINE CONTAINER ---------- */
+  main{
+    max-width:920px;
+    margin:0 auto;
+    padding: 50px 18px 30px;
+  }
+
+  .chapter-head{
+    text-align:center;
+    margin: 70px 0 34px;
+  }
+  .chapter-head:first-of-type{ margin-top:20px; }
+  .chapter-head .num{
+    font-family:'Special Elite', monospace;
+    color:var(--terracotta);
+    font-size:0.9rem;
+    letter-spacing:3px;
+  }
+  .chapter-head h2{
+    font-family:'Baloo 2', sans-serif;
+    font-size: clamp(1.6rem, 4vw, 2.3rem);
+    color:var(--pine);
+    margin:6px 0 0;
+  }
+
+  .panel{
+    display:flex;
+    align-items:center;
+    gap:34px;
+    background:var(--cream-card);
+    border:3px solid var(--ink);
+    border-radius:14px;
+    padding:26px;
+    margin-bottom:34px;
+    box-shadow: 7px 7px 0 rgba(43,38,32,0.85);
+    opacity:0;
+    transform:translateY(28px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+  }
+  .panel.visible{ opacity:1; transform:translateY(0); }
+  .panel.flip{ flex-direction:row-reverse; }
+
+  .icon-wrap{
+    flex: 0 0 130px;
+    width:130px; height:130px;
+    border-radius:50%;
+    background:var(--paper-dark);
+    border:3px solid var(--ink);
+    display:flex; align-items:center; justify-content:center;
+    position:relative;
+  }
+  .icon-wrap svg{ width:78px; height:78px; }
+
+  .panel-text{ flex:1; min-width:0; }
+  .date-tag{
+    display:inline-block;
+    font-family:'Special Elite', monospace;
+    background:var(--ink);
+    color:var(--paper);
+    padding:3px 10px;
+    border-radius:3px;
+    font-size:0.78rem;
+    margin-bottom:10px;
+    transform:rotate(-1deg);
+  }
+  .panel-text h3{
+    font-family:'Baloo 2', sans-serif;
+    font-size:1.35rem;
+    margin:0 0 8px;
+    color:var(--terracotta);
+  }
+  .panel-text p{
+    margin:0;
+    line-height:1.55;
+    font-size:1.02rem;
+    font-weight:600;
+  }
+  .panel-text p strong{ color:var(--pine); }
+
+  /* stamp badge (signature element) */
+  .official-stamp{
+    position:absolute;
+    width:108px; height:108px;
+    border:3px solid var(--terracotta);
+    border-radius:50%;
+    display:flex; align-items:center; justify-content:center;
+    text-align:center;
+    color:var(--terracotta);
+    font-family:'Special Elite', monospace;
+    font-size:0.72rem;
+    line-height:1.15;
+    letter-spacing:1px;
+    text-transform:uppercase;
+    background: rgba(193,80,46,0.06);
+    transform: rotate(-12deg);
+    top:-18px; right:-14px;
+    mix-blend-mode:multiply;
+  }
+  .official-stamp::before, .official-stamp::after{
+    content:"";
+    position:absolute; inset:6px;
+    border:1px solid var(--terracotta);
+    border-radius:50%;
+  }
+  @media (max-width:640px){
+    .official-stamp{ display:none; }
+  }
+
+  @media (max-width:680px){
+    .panel, .panel.flip{ flex-direction:column; text-align:center; gap:18px; }
+    .icon-wrap{ width:104px; height:104px; }
+    .icon-wrap svg{ width:62px; height:62px; }
+  }
+
+  /* ---------- CLOSING ---------- */
+  .closing{
+    background:var(--gold);
+    border-top:10px solid var(--ink);
+    border-bottom:10px solid var(--ink);
+    padding:54px 20px;
+    text-align:center;
+  }
+  .closing h2{
+    font-family:'Baloo 2', sans-serif;
+    font-size:clamp(1.8rem,5vw,2.6rem);
+    color:var(--ink);
+    margin:0 0 14px;
+  }
+  .closing p{
+    max-width:560px;
+    margin:0 auto;
+    font-weight:700;
+    font-size:1.08rem;
+  }
+
+  footer{
+    background:var(--ink);
+    color:var(--paper);
+    padding:26px 20px 34px;
+    font-size:0.85rem;
+    text-align:center;
+  }
+  footer .note-title{
+    font-family:'Special Elite', monospace;
+    letter-spacing:1px;
+    color:var(--gold);
+    margin-bottom:8px;
+    display:block;
+  }
+  footer p{ max-width:680px; margin:0 auto; line-height:1.6; opacity:0.85; }
+
+  @media (prefers-reduced-motion: reduce){
+    .panel{ transition:none; }
+    .hero .scroll-cue{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <span class="eyebrow">basado en hechos reales · resumen sencillo</span>
+  <h1>EUROVILLAS</h1>
+  <p class="sub">La historia de cómo, en el campo cerca de Madrid, nació un pueblo de chalets… y de cómo sus vecinos tuvieron que aprender a cuidarlo ellos mismos.</p>
+  <div class="scroll-cue">↓ desliza para empezar la historia ↓</div>
+</section>
+
+<div class="map-strip">NUEVO BAZTÁN · VILLAR DEL OLMO — A 45 KM AL ESTE DE MADRID</div>
+
+<main>
+
+  <!-- CAPÍTULO 1 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 1</span><h2>Un sueño en el campo</h2></div>
+  <div class="panel">
+    <div class="icon-wrap">
+      <svg viewBox="0 0 100 100">
+        <path d="M0 70 Q 25 45, 50 65 T 100 60 L 100 100 L 0 100 Z" fill="#2F4B3C"/>
+        <rect x="38" y="18" width="34" height="40" rx="3" fill="#FAF4E4" stroke="#2B2620" stroke-width="3"/>
+        <line x1="44" y1="28" x2="66" y2="28" stroke="#C1502E" stroke-width="3"/>
+        <line x1="44" y1="36" x2="66" y2="36" stroke="#C1502E" stroke-width="3"/>
+        <line x1="44" y1="44" x2="58" y2="44" stroke="#C1502E" stroke-width="3"/>
+      </svg>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">1967 – 1968</span>
+      <h3>Un terreno, un plano y un nombre con estrellas</h3>
+      <p>Hace más de cincuenta años, una empresa compró un terreno enorme de campo y monte para construir ahí un pueblo nuevo de chalets. Lo llamaron <strong>«Ciudad de las Américas»</strong>. En 1968, el plan se aprobó oficialmente: ¡luz verde para empezar a construir!</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 2 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 2</span><h2>Casas antes que permisos</h2></div>
+  <div class="panel flip">
+    <div class="icon-wrap" style="position:relative;">
+      <svg viewBox="0 0 100 100">
+        <polygon points="50,18 85,45 15,45" fill="#C1502E"/>
+        <rect x="25" y="45" width="50" height="38" fill="#FAF4E4" stroke="#2B2620" stroke-width="3"/>
+        <rect x="42" y="58" width="16" height="25" fill="#2B2620"/>
+      </svg>
+      <div class="official-stamp">sin<br>permiso</div>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">1969 – 1975</span>
+      <h3>Construir rápido, terminar despacio</h3>
+      <p>La empresa empezó a vender parcelas y a levantar casas muy rápido, sin esperar siempre los permisos necesarios para acabar bien las calles, el agua o la luz. Sobre el papel todo avanzaba… pero en el terreno, no tanto.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 3 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 3</span><h2>¡La empresa desaparece!</h2></div>
+  <div class="panel">
+    <div class="icon-wrap" style="position:relative;">
+      <svg viewBox="0 0 100 100">
+        <polygon points="50,20 80,42 20,42" fill="#7d7466"/>
+        <rect x="28" y="42" width="44" height="36" fill="#cdbfa0" stroke="#2B2620" stroke-width="3"/>
+        <rect x="44" y="55" width="12" height="23" fill="#2B2620"/>
+        <line x1="30" y1="30" x2="70" y2="68" stroke="#C1502E" stroke-width="4"/>
+      </svg>
+      <div class="official-stamp">quiebra<br>1975</div>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">1975</span>
+      <h3>Sin dinero, sin empresa, a medio terminar</h3>
+      <p>En 1975 la empresa se quedó sin dinero y lo dejó todo a medias: faltaban calles bien hechas, agua de calidad, alumbrado… y, durante un tiempo, ninguna administración se hizo cargo del problema.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 4 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 4</span><h2>Los vecinos se organizan</h2></div>
+  <div class="panel flip">
+    <div class="icon-wrap">
+      <svg viewBox="0 0 100 100">
+        <circle cx="50" cy="58" r="8" fill="#C1502E"/>
+        <g fill="#2F4B3C">
+          <circle cx="50" cy="22" r="7"/><rect x="44" y="29" width="12" height="16" rx="4"/>
+          <circle cx="76" cy="38" r="7"/><rect x="70" y="45" width="12" height="16" rx="4"/>
+          <circle cx="76" cy="74" r="7"/><rect x="70" y="81" width="12" height="16" rx="4"/>
+          <circle cx="50" cy="90" r="7"/><rect x="44" y="83" width="12" height="14" rx="4"/>
+          <circle cx="24" cy="74" r="7"/><rect x="18" y="81" width="12" height="16" rx="4"/>
+          <circle cx="24" cy="38" r="7"/><rect x="18" y="45" width="12" height="16" rx="4"/>
+        </g>
+      </svg>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">1975 – 1987</span>
+      <h3>«Si nadie lo cuida, lo cuidamos nosotros»</h3>
+      <p>Los propios vecinos crearon su propia asociación: la <strong>AAPP</strong>. Casi 2.000 propietarios pusieron dinero y esfuerzo para que las calles, el agua y los servicios no se abandonaran del todo, mientras esperaban una solución oficial.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 5 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 5</span><h2>Nace una entidad oficial</h2></div>
+  <div class="panel">
+    <div class="icon-wrap" style="position:relative;">
+      <svg viewBox="0 0 100 100">
+        <rect x="26" y="14" width="48" height="58" rx="3" fill="#FAF4E4" stroke="#2B2620" stroke-width="3"/>
+        <line x1="34" y1="28" x2="66" y2="28" stroke="#2F4B3C" stroke-width="3"/>
+        <line x1="34" y1="38" x2="66" y2="38" stroke="#2F4B3C" stroke-width="3"/>
+        <line x1="34" y1="48" x2="56" y2="48" stroke="#2F4B3C" stroke-width="3"/>
+        <circle cx="68" cy="68" r="14" fill="#E8B339" stroke="#2B2620" stroke-width="3"/>
+        <path d="M68 60 L71 67 L68 64 L65 67 Z" fill="#2B2620"/>
+      </svg>
+      <div class="official-stamp">euce<br>1989-90</div>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">1987 – 1990</span>
+      <h3>Vecinos, ayuntamientos y Comunidad de Madrid, de acuerdo</h3>
+      <p>En 1987 firmaron un convenio para terminar la urbanización entre todos. De ahí nació la <strong>EUCE</strong>, una entidad encargada de conservar Eurovillas, que quedó constituida oficialmente en Madrid en 1990.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 6 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 6</span><h2>La lucha por terminar las obras</h2></div>
+  <div class="panel flip">
+    <div class="icon-wrap">
+      <svg viewBox="0 0 100 100">
+        <rect x="40" y="16" width="10" height="22" fill="#4A8FBD"/>
+        <rect x="34" y="10" width="22" height="8" rx="2" fill="#2B2620"/>
+        <circle cx="45" cy="44" r="5" fill="#4A8FBD"/>
+        <rect x="10" y="70" width="80" height="14" fill="#7d7466"/>
+        <line x1="10" y1="77" x2="90" y2="77" stroke="#FAF4E4" stroke-width="3" stroke-dasharray="8 8"/>
+      </svg>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">1990 – 2007</span>
+      <h3>Agua, calles, luz… ¿y quién paga qué?</h3>
+      <p>Durante años se discutió cómo terminar de verdad los servicios básicos. Hubo informes que decían que muchas cosas aún no estaban bien, intentos de crear un «Consorcio» entre ayuntamientos y vecinos, y varios casos que terminaron en los tribunales.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 7 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 7</span><h2>Los tribunales deciden</h2></div>
+  <div class="panel">
+    <div class="icon-wrap">
+      <svg viewBox="0 0 100 100">
+        <polygon points="50,16 84,38 16,38" fill="#2F4B3C"/>
+        <rect x="22" y="38" width="10" height="30" fill="#2F4B3C"/>
+        <rect x="45" y="38" width="10" height="30" fill="#2F4B3C"/>
+        <rect x="68" y="38" width="10" height="30" fill="#2F4B3C"/>
+        <rect x="14" y="68" width="72" height="10" fill="#2F4B3C"/>
+        <rect x="58" y="14" width="22" height="6" fill="#C1502E" transform="rotate(25 69 17)"/>
+        <circle cx="63" cy="22" r="6" fill="#C1502E"/>
+      </svg>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">2007 – 2014</span>
+      <h3>Sentencia tras sentencia</h3>
+      <p>Los tribunales fueron resolviendo, poco a poco, estas disputas. Unas veces a favor de la administración, otras a favor de los vecinos. Mientras tanto, Eurovillas seguía creciendo en casas y familias.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 8 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 8</span><h2>Años de discusiones internas</h2></div>
+  <div class="panel flip">
+    <div class="icon-wrap">
+      <svg viewBox="0 0 100 100">
+        <rect x="20" y="22" width="60" height="56" rx="4" fill="#FAF4E4" stroke="#2B2620" stroke-width="3"/>
+        <rect x="20" y="22" width="60" height="14" fill="#C1502E"/>
+        <rect x="32" y="14" width="6" height="14" fill="#2B2620"/>
+        <rect x="62" y="14" width="6" height="14" fill="#2B2620"/>
+        <text x="50" y="64" font-family="Baloo 2, sans-serif" font-size="34" font-weight="800" fill="#2F4B3C" text-anchor="middle">?</text>
+      </svg>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">2016 – 2022</span>
+      <h3>(la parte más enredada de la historia)</h3>
+      <p>En estos años hubo bastantes desacuerdos sobre cómo se organizaban las reuniones y quién debía dirigir la entidad de conservación. Es una etapa larga y complicada, así que la resumimos en pocas palabras: hubo tensión, pero la vida en Eurovillas siguió adelante.</p>
+    </div>
+  </div>
+
+  <!-- CAPÍTULO 9 -->
+  <div class="chapter-head"><span class="num">CAPÍTULO 9</span><h2>Por fin, el pueblo lo asume</h2></div>
+  <div class="panel">
+    <div class="icon-wrap" style="position:relative;">
+      <svg viewBox="0 0 100 100">
+        <polygon points="50,16 84,40 16,40" fill="#2F4B3C"/>
+        <rect x="24" y="40" width="52" height="36" fill="#FAF4E4" stroke="#2B2620" stroke-width="3"/>
+        <ellipse cx="50" cy="60" rx="16" ry="7" fill="#E8B339" stroke="#2B2620" stroke-width="2.5"/>
+      </svg>
+      <div class="official-stamp">recibido<br>2022</div>
+    </div>
+    <div class="panel-text">
+      <span class="date-tag">2022</span>
+      <h3>Más de 50 años después…</h3>
+      <p>En 2022, el Ayuntamiento de Nuevo Baztán dio un paso muy importante: asumió oficialmente la urbanización como parte del pueblo. Una manera de cerrar, por fin, el largo capítulo de «¿de quién es esto?».</p>
+    </div>
+  </div>
+
+</main>
+
+<section class="closing">
+  <h2>Eurovillas, hoy</h2>
+  <p>Hoy Eurovillas tiene miles de casas y vecinos, rodeada de campo y de naturaleza, a las afueras de Madrid. Su historia nos recuerda que un lugar no se construye solo con ladrillos y planos: se construye con la gente que decide cuidarlo, generación tras generación.</p>
+</section>
+
+<footer>
+  <span class="note-title">📌 nota de honestidad</span>
+  <p>Este cómic resume, de forma muy sencilla, una historia real de más de 50 años. Los hitos de 1967 a 2022 se han contrastado con fuentes públicas (la web de la urbanización, asociaciones de vecinos y prensa) y coinciden bien con el documento original. Los detalles más recientes y muy internos (actas, sanciones concretas, disputas entre 2023 y 2026) no siempre se pueden verificar fuera del propio documento, así que aquí se han resumido sin entrar en detalle.</p>
+</footer>
+
+<script>
+  const panels = document.querySelectorAll('.panel');
+  const obs = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{
+      if(e.isIntersecting){ e.target.classList.add('visible'); }
+    });
+  }, {threshold:0.15});
+  panels.forEach(p=>obs.observe(p));
+</script>
+
+</body>
+</html>

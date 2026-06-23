@@ -1,0 +1,44 @@
+INSTRUCCIONES PARA COLOCAR LAS FOTOS
+=======================================
+
+Escanea o fotografía los originales y guárdalos en esta carpeta
+con los nombres exactos indicados abajo. El comic las cargará
+automáticamente en el lugar correcto.
+
+Foto 1 → chalet-jardin.jpg
+  La fotografía del chalet con jardín y muro de piedra.
+  Aparece en: Capítulo 1 "Un sueño en el campo"
+
+Foto 2 → piscina-anos70.jpg
+  La fotografía de la piscina grande (vista panorámica/lejana).
+  Aparece en: Capítulo 1 "Vender deprisa, terminar nunca"
+
+Foto 3 → fiesta-escenario.jpg
+  Las fotografías del escenario al aire libre con cantante (fiestas de verano).
+  Aparece en: Capítulo 2 "«Si nadie lo cuida...»"
+
+Foto 4 → piscina-vecinos.jpg
+  La fotografía de las dos señoras en la piscina.
+  Aparece en: Capítulo 2 "El convenio que lo prometía todo"
+
+Foto 5 → carretera-eurovillas.jpg
+  La fotografía de la carretera con gente caminando al fondo.
+  Aparece en: Capítulo 3 "El estado real de la urbanización"
+
+Foto 6 → boxeo-eurovillas.jpg
+  La fotografía del combate de boxeo (Federación Centro de Boxeo).
+  Aparece en: Capítulo 3 "El Consorcio que nunca pudo nacer"
+
+Foto 7 → fiesta-nocturna.jpg
+  La fotografía de la fiesta nocturna con mucha gente.
+  Aparece en: Capítulo 5 "El TSJM anula cuatro asambleas"
+
+Foto 8 → recinto-eurovillas.jpg
+  La fotografía de la plaza/recinto circular.
+  Aparece en: Capítulo 6 "El problema que nadie resolvió"
+
+FORMATO RECOMENDADO:
+- JPG o WebP, calidad media-alta (no hace falta el original sin comprimir)
+- Ancho mínimo 600 px (el comic los muestra a ~260 px de ancho)
+- Si hay personas identificables en primer plano, considera si quieres
+  usarla en un documento público o reservarla para el área de socios.
