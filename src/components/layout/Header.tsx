@@ -23,7 +23,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="text-sm font-sans font-medium text-avade-marron-oscuro hover:text-avade-verde-oscuro transition-colors no-underline"
+                className="text-base font-sans font-medium text-avade-marron-oscuro hover:text-avade-verde-oscuro transition-colors no-underline"
               >
                 {item.label}
               </Link>
@@ -33,7 +33,7 @@ export function Header() {
           <div className="hidden md:flex items-center gap-3">
             <Link
               href="/portal"
-              className="text-sm font-sans font-medium text-avade-verde-oscuro hover:text-avade-verde-hover transition-colors no-underline"
+              className="text-base font-sans font-medium text-avade-verde-oscuro hover:text-avade-verde-hover transition-colors no-underline"
             >
               Zona de socios
             </Link>

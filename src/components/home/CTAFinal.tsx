@@ -35,7 +35,7 @@ export function CTAFinal() {
     <section className="section-padding bg-white" aria-labelledby="cta-heading">
       <div className="container-site">
         <div className="text-center mb-16">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             Deja tu huella
           </p>
           <h2
@@ -56,7 +56,7 @@ export function CTAFinal() {
             id="info"
             className="bg-avade-beige border border-avade-taupe rounded-sm p-8"
           >
-            <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-4">
+            <p className="section-label mb-4">
               Opción 1 — Sin compromisos
             </p>
             <h3 className="text-2xl font-serif font-semibold text-avade-marron-profundo mb-3">
@@ -72,18 +72,18 @@ export function CTAFinal() {
 
           {/* Conversión fuerte */}
           <div className="bg-avade-marron-profundo rounded-sm p-8">
-            <p className="text-xs font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
+            <p className="text-sm font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
               Opción 2 — El paso real
             </p>
             <h3 className="text-2xl font-serif font-semibold text-avade-casi-blanco mb-3">
               Quiero adherirme a la plataforma
             </h3>
-            <p className="text-base text-avade-taupe mb-6 leading-relaxed">
+            <p className="text-base text-avade-beige mb-6 leading-relaxed">
               Rellena el formulario y el equipo se pone en contacto contigo para
               completar el proceso de adhesión. La adhesión no es automática: un
               miembro del equipo la revisa y te confirma personalmente.
             </p>
-            <ul className="space-y-2 mb-8">
+            <ul className="space-y-3 mb-8">
               {[
                 "Sin cuotas de ningún tipo",
                 "Sin compromisos de asistencia",
@@ -92,10 +92,10 @@ export function CTAFinal() {
               ].map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-2 text-sm text-avade-beige"
+                  className="flex items-start gap-2 text-base text-avade-beige"
                 >
                   <svg
-                    className="w-4 h-4 text-avade-verde-claro flex-shrink-0 mt-0.5"
+                    className="w-5 h-5 text-avade-verde-claro flex-shrink-0 mt-0.5"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     aria-hidden="true"
@@ -120,7 +120,7 @@ export function CTAFinal() {
         <div className="border-t border-avade-beige pt-12">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
             <div>
-              <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-1">
+              <p className="section-label mb-1">
                 Estado actual
               </p>
               <h3 className="text-xl font-serif font-semibold text-avade-marron-profundo">
@@ -129,7 +129,7 @@ export function CTAFinal() {
             </div>
             <Link
               href="/procesos"
-              className="text-sm font-sans font-medium text-avade-verde-oscuro hover:underline flex-shrink-0"
+              className="text-base font-sans font-medium text-avade-verde-oscuro hover:underline flex-shrink-0"
             >
               Ver todos los procesos →
             </Link>
@@ -141,7 +141,7 @@ export function CTAFinal() {
                 key={idx}
                 className="flex items-center justify-between gap-4 bg-avade-casi-blanco border border-avade-beige rounded-sm px-4 py-3"
               >
-                <p className="text-sm font-sans text-avade-marron-oscuro">
+                <p className="text-base font-sans text-avade-marron-oscuro">
                   {proceso.titulo}
                 </p>
                 <span

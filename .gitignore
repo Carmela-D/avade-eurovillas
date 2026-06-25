@@ -1,20 +1,28 @@
-<<<<<<< HEAD
 # Dependencies
 /node_modules
 /.pnp
 .pnp.js
-.yarn/install-state.gz
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
 
-# Next.js build output
+# Next.js
 /.next/
 /out/
 
 # Production
 /build
 
+# Testing
+/coverage
+
 # Environment variables — NUNCA subir al repo
 .env
 .env.local
+.env*.local
 .env.development.local
 .env.test.local
 .env.production.local
@@ -23,6 +31,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+.pnpm-debug.log*
 
 # Vercel
 .vercel
@@ -33,6 +42,7 @@ next-env.d.ts
 
 # OS
 .DS_Store
+*.pem
 Thumbs.db
 
 # Editor
@@ -47,49 +57,4 @@ Cronograma.pdf
 Fotos/
 ss-*.png
 screenshot.mjs
-=======
-# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
-
-# dependencies
-/node_modules
-/.pnp
-.pnp.*
-.yarn/*
-!.yarn/patches
-!.yarn/plugins
-!.yarn/releases
-!.yarn/versions
-
-# testing
-/coverage
-
-# next.js
-/.next/
-/out/
-
-# production
-/build
-
-# misc
-.DS_Store
-*.pem
-
-# debug
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-.pnpm-debug.log*
-
-# env files (can opt-in for committing if needed)
-.env*.local
-.env
-
-# vercel
-.vercel
-
-# typescript
-*.tsbuildinfo
-next-env.d.ts
->>>>>>> 14685811ab7598a231a8b0b2420a6b41b4243778
-
 setup-supabase.mjs

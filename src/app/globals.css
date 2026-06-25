@@ -13,7 +13,12 @@
     --avade-marron-profundo: #3a2f22;
   }
 
+  /*
+   * Base de 18 px para facilitar la lectura a personas con presbicia u otras
+   * dificultades visuales. Todos los valores en rem escalan a partir de aquí.
+   */
   html {
+    font-size: 18px;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -21,8 +26,7 @@
 
   body {
     @apply bg-avade-casi-blanco text-avade-marron-oscuro font-sans;
-    font-size: 1rem;
-    line-height: 1.7;
+    line-height: 1.8;
   }
 
   h1,
@@ -32,7 +36,7 @@
   h5,
   h6 {
     @apply font-serif text-avade-marron-profundo;
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   h1 {
@@ -82,30 +86,35 @@
     @apply py-10 md:py-16;
   }
 
-  /* Buttons */
+  /* Etiquetas decorativas de sección (ej: "El problema en 60 segundos") */
+  .section-label {
+    @apply text-sm font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest;
+  }
+
+  /* Buttons — padding explícito para targets táctiles amplios */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-avade-verde-oscuro text-white font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-200 hover:bg-avade-verde-hover hover:border-avade-verde-hover focus-visible:outline-avade-verde-oscuro no-underline;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-avade-verde-oscuro text-white font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-200 hover:bg-avade-verde-hover hover:border-avade-verde-hover focus-visible:outline-avade-verde-oscuro no-underline;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-avade-verde-oscuro font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-200 hover:bg-avade-verde-oscuro hover:text-white focus-visible:outline-avade-verde-oscuro no-underline;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-avade-verde-oscuro font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-200 hover:bg-avade-verde-oscuro hover:text-white focus-visible:outline-avade-verde-oscuro no-underline;
   }
 
   .btn-outline-light {
-    @apply inline-flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-avade-casi-blanco font-sans font-semibold text-base rounded-sm border-2 border-avade-casi-blanco transition-all duration-200 hover:bg-avade-casi-blanco hover:text-avade-marron-profundo focus-visible:outline-white no-underline;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-avade-casi-blanco font-sans font-semibold text-base rounded-sm border-2 border-avade-casi-blanco transition-all duration-200 hover:bg-avade-casi-blanco hover:text-avade-marron-profundo focus-visible:outline-white no-underline;
   }
 
   .btn-sm {
-    @apply px-4 py-2 text-sm;
+    @apply px-5 py-2.5 text-sm;
   }
 
   /* Form elements */
   .form-input {
-    @apply w-full px-4 py-3 bg-white border border-avade-taupe rounded-sm text-avade-marron-oscuro placeholder-avade-taupe transition-colors duration-200 focus:outline-none focus:border-avade-verde-oscuro focus:ring-2 focus:ring-avade-verde-oscuro/20;
+    @apply w-full px-4 py-3 bg-white border border-avade-taupe rounded-sm text-avade-marron-oscuro placeholder-avade-taupe transition-colors duration-200 focus:outline-none focus:border-avade-verde-oscuro focus:ring-2 focus:ring-avade-verde-oscuro/20 text-base;
   }
 
   .form-label {
-    @apply block text-sm font-semibold text-avade-marron-profundo mb-1.5 font-sans;
+    @apply block text-base font-semibold text-avade-marron-profundo mb-2 font-sans;
   }
 
   .form-error {
@@ -121,9 +130,9 @@
     @apply bg-avade-beige border border-avade-taupe rounded-sm p-6;
   }
 
-  /* Badges */
+  /* Badges — text-sm para que sean legibles */
   .badge {
-    @apply inline-flex items-center px-2.5 py-0.5 text-xs font-semibold font-sans rounded-full;
+    @apply inline-flex items-center px-3 py-1 text-sm font-semibold font-sans rounded-full;
   }
 
   .badge-green {
@@ -154,7 +163,7 @@
 
   /* Skip to content link */
   .skip-link {
-    @apply absolute -top-10 left-4 z-50 px-4 py-2 bg-avade-verde-oscuro text-white text-sm font-semibold rounded-sm focus:top-4 transition-all duration-200 no-underline;
+    @apply absolute -top-10 left-4 z-50 px-4 py-2 bg-avade-verde-oscuro text-white text-base font-semibold rounded-sm focus:top-4 transition-all duration-200 no-underline;
   }
 }
 

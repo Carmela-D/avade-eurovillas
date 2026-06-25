@@ -6,7 +6,7 @@ export function ElProblema() {
     >
       <div className="container-site">
         <div className="max-w-3xl mx-auto">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-4">
+          <p className="section-label mb-4">
             El problema en 60 segundos
           </p>
           <h2
@@ -43,18 +43,18 @@ export function ElProblema() {
           {/* Visual comparison */}
           <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="bg-avade-beige border border-avade-taupe rounded-sm p-6">
-              <p className="text-xs font-sans font-semibold text-avade-taupe uppercase tracking-widest mb-3">
+              <p className="text-sm font-sans font-semibold text-avade-marron-oscuro uppercase tracking-widest mb-3">
                 En el resto de España
               </p>
               <p className="text-base font-sans text-avade-marron-oscuro">
                 IBI → ayuntamiento → servicios municipales
               </p>
-              <p className="mt-3 text-sm text-avade-verde-oscuro font-semibold">
+              <p className="mt-3 text-base text-avade-verde-oscuro font-semibold">
                 ✓ Un solo pago
               </p>
             </div>
             <div className="bg-avade-marron-profundo border border-avade-marron-oscuro rounded-sm p-6">
-              <p className="text-xs font-sans font-semibold text-avade-taupe uppercase tracking-widest mb-3">
+              <p className="text-sm font-sans font-semibold text-avade-beige uppercase tracking-widest mb-3">
                 En Eurovillas
               </p>
               <p className="text-base font-sans text-avade-beige">
@@ -63,7 +63,7 @@ export function ElProblema() {
               <p className="text-base font-sans text-avade-beige mt-1">
                 + cuota EUCE → servicios que ya cubriría el IBI
               </p>
-              <p className="mt-3 text-sm text-red-400 font-semibold">
+              <p className="mt-3 text-base text-red-400 font-semibold">
                 ✗ Doble pago por lo mismo
               </p>
             </div>

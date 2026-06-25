@@ -55,7 +55,7 @@ export function LaPrueba() {
       <div className="container-site">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-16">
           <div className="lg:col-span-1">
-            <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-4">
+            <p className="section-label mb-4">
               Cronología
             </p>
             <h2
@@ -75,7 +75,7 @@ export function LaPrueba() {
               </Link>
               <Link
                 href="/libreria"
-                className="text-sm font-sans font-medium text-avade-verde-oscuro hover:underline"
+                className="text-base font-sans font-medium text-avade-verde-oscuro hover:underline"
               >
                 Consultar documentos →
               </Link>
@@ -125,13 +125,13 @@ export function LaPrueba() {
                         : ""
                     }`}
                   >
-                    <time className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest">
+                    <time className="text-sm font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest">
                       {hito.año}
                     </time>
                     <h3 className="text-base font-serif font-semibold text-avade-marron-profundo mt-1 mb-2">
                       {hito.titulo}
                     </h3>
-                    <p className="text-sm text-avade-marron-oscuro leading-relaxed">
+                    <p className="text-base text-avade-marron-oscuro leading-relaxed">
                       {hito.texto}
                     </p>
                   </div>

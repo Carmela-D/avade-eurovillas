@@ -13,7 +13,7 @@ export function Hero() {
           <div className="space-y-8">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-avade-verde-oscuro/30 border border-avade-verde-claro/40 rounded-sm">
               <span className="w-2 h-2 rounded-full bg-avade-verde-claro animate-pulse" aria-hidden="true" />
-              <span className="text-xs font-sans font-semibold text-avade-verde-claro uppercase tracking-widest">
+              <span className="text-sm font-sans font-semibold text-avade-verde-claro uppercase tracking-widest">
                 Respaldados por el Defensor del Pueblo
               </span>
             </div>
@@ -49,15 +49,15 @@ export function Hero() {
             <div className="grid grid-cols-3 gap-6 pt-4 border-t border-avade-marron-oscuro/50">
               <div>
                 <p className="text-3xl font-serif font-bold text-avade-casi-blanco">~4.000</p>
-                <p className="text-xs font-sans text-avade-taupe mt-1 leading-snug">parcelas afectadas</p>
+                <p className="text-sm font-sans text-avade-taupe mt-1 leading-snug">parcelas afectadas</p>
               </div>
               <div>
                 <p className="text-3xl font-serif font-bold text-avade-casi-blanco">~12.000</p>
-                <p className="text-xs font-sans text-avade-taupe mt-1 leading-snug">vecinos en Eurovillas</p>
+                <p className="text-sm font-sans text-avade-taupe mt-1 leading-snug">vecinos en Eurovillas</p>
               </div>
               <div>
                 <p className="text-3xl font-serif font-bold text-avade-verde-claro">58 años</p>
-                <p className="text-xs font-sans text-avade-taupe mt-1 leading-snug">sin resolver</p>
+                <p className="text-sm font-sans text-avade-taupe mt-1 leading-snug">sin resolver</p>
               </div>
             </div>
           </div>
