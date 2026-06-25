@@ -47,7 +47,7 @@ export function PorQueUnirte() {
     >
       <div className="container-site">
         <div className="max-w-2xl mb-12">
-          <p className="text-xs font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
+          <p className="text-sm font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
             Por qué sumarse
           </p>
           <h2
@@ -70,7 +70,7 @@ export function PorQueUnirte() {
               className="border border-avade-marron-oscuro rounded-sm p-6 hover:border-avade-verde-claro/50 transition-colors"
             >
               <p
-                className="text-4xl font-serif font-light text-avade-verde-oscuro/40 mb-4 leading-none"
+                className="text-4xl font-serif font-light text-avade-verde-claro/25 mb-4 leading-none"
                 aria-hidden="true"
               >
                 {razon.numero}
@@ -78,7 +78,7 @@ export function PorQueUnirte() {
               <h3 className="text-lg font-serif font-semibold text-avade-casi-blanco mb-3">
                 {razon.titulo}
               </h3>
-              <p className="text-sm text-avade-taupe leading-relaxed">
+              <p className="text-base text-avade-taupe leading-relaxed">
                 {razon.texto}
               </p>
             </div>

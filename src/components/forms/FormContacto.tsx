@@ -168,7 +168,7 @@ export function FormContacto() {
         {estado === "loading" ? "Enviando…" : "Enviar mensaje"}
       </button>
 
-      <p className="text-xs text-avade-taupe">
+      <p className="text-sm text-avade-marron-oscuro">
         Los datos de este formulario se usan exclusivamente para responder a tu
         consulta y se tratan conforme al RGPD.
       </p>

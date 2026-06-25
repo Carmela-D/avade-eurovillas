@@ -44,10 +44,10 @@ export default async function SolicitudesAdminPage({
     <div className="section-padding">
       <div className="container-site">
         <div className="flex items-center gap-3 mb-2">
-          <Link href="/portal/admin" className="text-sm text-avade-taupe hover:text-avade-verde-oscuro no-underline">
+          <Link href="/portal/admin" className="text-sm text-avade-marron-oscuro hover:text-avade-verde-oscuro no-underline">
             Admin
           </Link>
-          <span className="text-avade-taupe" aria-hidden="true">/</span>
+          <span className="text-avade-marron-oscuro" aria-hidden="true">/</span>
           <h1 className="text-xl font-serif font-semibold text-avade-marron-profundo">
             Solicitudes
           </h1>
@@ -91,10 +91,10 @@ export default async function SolicitudesAdminPage({
                       <p className="text-sm text-avade-marron-oscuro">{sol.telefono}</p>
                     )}
                     {sol.direccion_parcela && (
-                      <p className="text-sm text-avade-taupe">Parcela: {sol.direccion_parcela}</p>
+                      <p className="text-sm text-avade-marron-oscuro">Parcela: {sol.direccion_parcela}</p>
                     )}
                   </div>
-                  <time className="text-xs text-avade-taupe flex-shrink-0">
+                  <time className="text-sm text-avade-marron-oscuro flex-shrink-0">
                     {new Date(sol.created_at).toLocaleDateString("es-ES", {
                       day: "numeric",
                       month: "long",
@@ -135,7 +135,7 @@ export default async function SolicitudesAdminPage({
             ))}
           </div>
         ) : (
-          <p className="text-base text-avade-taupe py-8">
+          <p className="text-base text-avade-marron-oscuro py-8">
             No hay solicitudes con estado &quot;{estado}&quot;.
           </p>
         )}

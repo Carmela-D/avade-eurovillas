@@ -80,7 +80,7 @@ export default async function ProcesosPage() {
     <PublicLayout>
       <div className="bg-avade-casi-blanco section-padding-sm border-b border-avade-beige">
         <div className="container-site">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             Estado a {new Date().toLocaleDateString("es-ES", { month: "long", year: "numeric" })}
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-semibold text-avade-marron-profundo mb-4">
@@ -111,10 +111,10 @@ export default async function ProcesosPage() {
                         {proceso.titulo}
                       </h2>
                     </div>
-                    <p className="text-sm text-avade-marron-oscuro leading-relaxed mb-3">
+                    <p className="text-base text-avade-marron-oscuro leading-relaxed mb-3">
                       {proceso.descripcion}
                     </p>
-                    <p className="text-xs text-avade-taupe">
+                    <p className="text-sm text-avade-marron-oscuro">
                       Actualizado:{" "}
                       {new Date(proceso.updated_at).toLocaleDateString("es-ES")}
                     </p>
@@ -159,7 +159,7 @@ export default async function ProcesosPage() {
                         accesible solo para socios.
                       </p>
                       <div className="flex gap-3">
-                        <Link href="/auth/login" className="btn-secondary btn-sm">
+                        <Link href="/auth/login" className="btn-secondary btn-sm bg-white">
                           Iniciar sesión
                         </Link>
                         <Link href="/hazte-socio" className="btn-primary btn-sm">

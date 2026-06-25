@@ -60,7 +60,7 @@ function LoginForm() {
           <strong className="text-avade-marron-profundo">{email}</strong>.
           Haz clic en él para entrar al portal. El enlace caduca en 1 hora.
         </p>
-        <p className="text-sm text-avade-taupe">
+        <p className="text-sm text-avade-marron-oscuro">
           Si no lo ves, revisa la carpeta de spam.
         </p>
       </div>
@@ -104,7 +104,7 @@ function LoginForm() {
         {estado === "loading" ? "Enviando enlace…" : "Enviarme el enlace de acceso"}
       </button>
 
-      <p className="text-xs text-avade-taupe text-center leading-relaxed">
+      <p className="text-sm text-avade-marron-oscuro text-center leading-relaxed">
         Acceso por enlace mágico: no hay contraseñas. Recibirás un email con un
         enlace que te permite entrar directamente. El enlace caduca en 1 hora.
       </p>
@@ -142,7 +142,7 @@ export default function LoginPage() {
               Solicita la adhesión →
             </Link>
           </p>
-          <Link href="/" className="text-sm text-avade-taupe hover:text-avade-marron-oscuro transition-colors no-underline block">
+          <Link href="/" className="text-sm text-avade-marron-oscuro hover:text-avade-marron-profundo transition-colors no-underline block">
             ← Volver al inicio
           </Link>
         </div>

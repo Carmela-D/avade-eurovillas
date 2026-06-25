@@ -142,9 +142,9 @@ export default async function ProcesoPage({ params }: Props) {
             </svg>
             <h1 className="text-2xl font-serif font-semibold text-avade-marron-profundo">{proceso.titulo}</h1>
             <p className="text-base text-avade-marron-oscuro max-w-md">{proceso.descripcion}</p>
-            <p className="text-sm text-avade-taupe">Este proceso contiene documentación legal sensible accesible solo para socios.</p>
+            <p className="text-sm text-avade-marron-oscuro">Este proceso contiene documentación legal sensible accesible solo para socios.</p>
             <div className="flex gap-3">
-              <Link href="/auth/login" className="btn-secondary">Iniciar sesión</Link>
+              <Link href="/auth/login" className="btn-secondary bg-white">Iniciar sesión</Link>
               <Link href="/hazte-socio" className="btn-primary">Hazte socio</Link>
             </div>
           </div>
@@ -157,7 +157,7 @@ export default async function ProcesoPage({ params }: Props) {
     <PublicLayout>
       <div className="section-padding bg-avade-casi-blanco">
         <div className="container-site max-w-3xl">
-          <nav className="text-sm font-sans text-avade-taupe mb-8" aria-label="Ruta de navegación">
+          <nav className="text-sm font-sans text-avade-marron-oscuro mb-8" aria-label="Ruta de navegación">
             <Link href="/procesos" className="hover:text-avade-verde-oscuro transition-colors no-underline">
               Procesos activos
             </Link>
@@ -174,7 +174,7 @@ export default async function ProcesoPage({ params }: Props) {
             </Badge>
           </div>
 
-          <p className="text-xs text-avade-taupe font-sans mb-8">
+          <p className="text-sm text-avade-marron-oscuro font-sans mb-8">
             Actualizado el{" "}
             {new Date(proceso.updated_at).toLocaleDateString("es-ES", {
               day: "numeric",

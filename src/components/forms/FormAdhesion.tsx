@@ -73,7 +73,7 @@ export function FormAdhesion() {
           revisará y se pondrá en contacto contigo por email para completar el
           proceso. Puede tardar unos días.
         </p>
-        <p className="mt-4 text-sm text-avade-taupe">
+        <p className="mt-4 text-sm text-avade-marron-oscuro">
           Si tienes prisa o alguna duda, escríbenos directamente a{" "}
           <a
             href="mailto:informacion@avade.org"
@@ -165,7 +165,7 @@ export function FormAdhesion() {
       <div>
         <label htmlFor="ad-telefono" className="form-label">
           Teléfono{" "}
-          <span className="text-avade-taupe font-normal">(opcional)</span>
+          <span className="text-avade-marron-oscuro font-normal">(opcional)</span>
         </label>
         <input
           id="ad-telefono"
@@ -181,7 +181,7 @@ export function FormAdhesion() {
       <div>
         <label htmlFor="ad-parcela" className="form-label">
           Dirección de tu parcela en Eurovillas{" "}
-          <span className="text-avade-taupe font-normal">(opcional)</span>
+          <span className="text-avade-marron-oscuro font-normal">(opcional)</span>
         </label>
         <input
           id="ad-parcela"
@@ -191,7 +191,7 @@ export function FormAdhesion() {
           value={form.direccion_parcela}
           onChange={(e) => set("direccion_parcela", e.target.value)}
         />
-        <p className="text-xs text-avade-taupe mt-1">
+        <p className="text-sm text-avade-marron-oscuro mt-1">
           Solo para ubicar tu situación. Nunca se publicará.
         </p>
       </div>
@@ -199,7 +199,7 @@ export function FormAdhesion() {
       <div>
         <label htmlFor="ad-mensaje" className="form-label">
           ¿Quieres contarnos algo?{" "}
-          <span className="text-avade-taupe font-normal">(opcional)</span>
+          <span className="text-avade-marron-oscuro font-normal">(opcional)</span>
         </label>
         <textarea
           id="ad-mensaje"
@@ -230,7 +230,7 @@ export function FormAdhesion() {
           {estado === "loading" ? "Enviando solicitud…" : "Enviar solicitud de adhesión"}
         </button>
 
-        <p className="text-xs text-avade-taupe leading-relaxed text-center">
+        <p className="text-sm text-avade-marron-oscuro leading-relaxed text-center">
           Esta solicitud no te adhiere automáticamente. Un miembro del equipo la
           revisará y te contactará para completar el proceso. Nunca habrá ningún
           pago ni firma en esta web. Tus datos se usan solo para gestionar tu

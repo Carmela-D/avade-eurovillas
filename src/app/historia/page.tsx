@@ -93,7 +93,7 @@ export default function HistoriaPage() {
       {/* Hero de sección */}
       <div className="bg-avade-marron-profundo section-padding-sm">
         <div className="container-site">
-          <p className="text-xs font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
+          <p className="text-sm font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
             La historia de Eurovillas
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-semibold text-avade-casi-blanco mb-4 max-w-2xl">
@@ -134,7 +134,7 @@ export default function HistoriaPage() {
                   />
                   <div className={`flex-1 rounded-sm p-5 border ${coloresTipo[hito.tipo]} ${hito.destacado ? "border-avade-verde-oscuro" : "border-transparent"}`}>
                     <time
-                      className={`text-xs font-sans font-semibold uppercase tracking-widest ${hito.tipo === "hoy" ? "text-avade-verde-claro" : "text-avade-verde-oscuro"}`}
+                      className={`text-sm font-sans font-semibold uppercase tracking-widest ${hito.tipo === "hoy" ? "text-white" : "text-avade-marron-profundo"}`}
                     >
                       {hito.año}
                     </time>
@@ -144,7 +144,7 @@ export default function HistoriaPage() {
                       {hito.titulo}
                     </h2>
                     <p
-                      className={`text-sm leading-relaxed ${hito.tipo === "hoy" ? "text-avade-beige" : "text-avade-marron-oscuro"}`}
+                      className={`text-base leading-relaxed ${hito.tipo === "hoy" ? "text-white" : "text-avade-marron-oscuro"}`}
                     >
                       {hito.texto}
                     </p>
@@ -168,7 +168,7 @@ export default function HistoriaPage() {
               <Link href="/hazte-socio" className="btn-primary">
                 Quiero adherirme
               </Link>
-              <Link href="/procesos" className="btn-secondary">
+              <Link href="/procesos" className="btn-secondary bg-white">
                 Ver procesos activos
               </Link>
             </div>

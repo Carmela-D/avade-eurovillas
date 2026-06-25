@@ -79,7 +79,7 @@ export default async function AdminPage() {
                     <p className="text-sm font-semibold text-avade-marron-profundo">
                       {sol.nombre} — {sol.email}
                     </p>
-                    <p className="text-xs text-avade-taupe mt-0.5">
+                    <p className="text-sm text-avade-marron-oscuro mt-0.5">
                       {sol.tipo === "adhesion" ? "Solicitud de adhesión" : "Solicitud de información"} ·{" "}
                       {new Date(sol.created_at).toLocaleDateString("es-ES")}
                     </p>
@@ -94,7 +94,7 @@ export default async function AdminPage() {
               ))}
             </div>
           ) : (
-            <p className="text-sm text-avade-taupe bg-white border border-avade-beige rounded-sm p-6">
+            <p className="text-sm text-avade-marron-oscuro bg-white border border-avade-beige rounded-sm p-6">
               No hay solicitudes pendientes.
             </p>
           )}
@@ -122,8 +122,8 @@ export default async function AdminPage() {
                 <h3 className="text-sm font-semibold text-avade-marron-profundo mb-1">
                   {item.label}
                 </h3>
-                <p className="text-xs text-avade-marron-oscuro mb-3">{item.desc}</p>
-                <p className="text-xs text-avade-taupe font-mono">
+                <p className="text-sm text-avade-marron-oscuro mb-3">{item.desc}</p>
+                <p className="text-sm text-avade-marron-oscuro font-mono">
                   Supabase → Table Editor → {item.tabla}
                 </p>
               </div>

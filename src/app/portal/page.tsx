@@ -33,14 +33,14 @@ export default async function PortalDashboard() {
     <div className="section-padding">
       <div className="container-site">
         <div className="mb-10">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-2">
+          <p className="section-label mb-2">
             Portal de socios
           </p>
           <h1 className="text-3xl font-serif font-semibold text-avade-marron-profundo">
             Bienvenido, {socio?.nombre ?? "socio"}
           </h1>
           {socio?.fecha_alta && (
-            <p className="text-sm text-avade-taupe mt-1">
+            <p className="text-sm text-avade-marron-oscuro mt-1">
               Socio desde el{" "}
               {new Date(socio.fecha_alta).toLocaleDateString("es-ES", {
                 day: "numeric",
@@ -89,14 +89,14 @@ export default async function PortalDashboard() {
                     className="flex items-center justify-between gap-4 p-4 bg-white border border-avade-beige rounded-sm hover:border-avade-verde-oscuro/40 transition-colors no-underline"
                   >
                     <p className="text-sm font-sans text-avade-marron-oscuro">{com.titulo}</p>
-                    <time className="text-xs text-avade-taupe flex-shrink-0">
+                    <time className="text-sm text-avade-marron-oscuro flex-shrink-0">
                       {new Date(com.fecha).toLocaleDateString("es-ES")}
                     </time>
                   </Link>
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-avade-taupe">No hay comunicados todavía.</p>
+              <p className="text-sm text-avade-marron-oscuro">No hay comunicados todavía.</p>
             )}
           </div>
 
@@ -115,16 +115,16 @@ export default async function PortalDashboard() {
                   >
                     <div>
                       <p className="text-sm font-sans font-medium text-avade-marron-oscuro">{proc.titulo}</p>
-                      <p className="text-xs text-avade-taupe mt-0.5">{proc.estado_fase}</p>
+                      <p className="text-sm text-avade-marron-oscuro mt-0.5">{proc.estado_fase}</p>
                     </div>
-                    <time className="text-xs text-avade-taupe flex-shrink-0">
+                    <time className="text-sm text-avade-marron-oscuro flex-shrink-0">
                       {new Date(proc.updated_at).toLocaleDateString("es-ES")}
                     </time>
                   </Link>
                 ))}
               </div>
             ) : (
-              <p className="text-sm text-avade-taupe">No hay procesos registrados todavía.</p>
+              <p className="text-sm text-avade-marron-oscuro">No hay procesos registrados todavía.</p>
             )}
           </div>
         </div>

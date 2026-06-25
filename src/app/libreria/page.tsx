@@ -101,7 +101,7 @@ export default async function LibreriaPage() {
     <PublicLayout>
       <div className="bg-avade-casi-blanco section-padding-sm border-b border-avade-beige">
         <div className="container-site">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             Documentación pública
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-semibold text-avade-marron-profundo mb-4">
@@ -140,10 +140,10 @@ export default async function LibreriaPage() {
                     </h3>
                     <Badge variant="gray">{doc.tipo}</Badge>
                   </div>
-                  <p className="text-sm text-avade-marron-oscuro leading-relaxed mb-2">
+                  <p className="text-base text-avade-marron-oscuro leading-relaxed mb-2">
                     {doc.descripcion}
                   </p>
-                  <p className="text-xs text-avade-taupe">
+                  <p className="text-sm text-avade-marron-oscuro">
                     {new Date(doc.fecha).toLocaleDateString("es-ES", {
                       day: "numeric",
                       month: "long",

@@ -54,11 +54,11 @@ export function PlaceholderImage({
             <rect x="18" y="38" width="12" height="2" rx="1" fill="#BFB6A4" />
             <rect x="22" y="38" width="4" height="4" rx="0.5" fill="#BFB6A4" />
           </svg>
-          <p className="text-sm font-sans text-avade-verde-oscuro font-medium leading-snug max-w-xs">
+          <p className="text-sm font-sans text-avade-marron-profundo font-medium leading-snug max-w-xs">
             {description}
           </p>
-          <p className="text-xs font-sans text-avade-taupe">
-            Sustituir por: <code className="text-avade-verde-claro">/public/images/{filename}</code>
+          <p className="text-sm font-sans text-avade-marron-oscuro">
+            Sustituir por: <code className="text-avade-marron-profundo">/public/images/{filename}</code>
           </p>
         </div>
       </div>

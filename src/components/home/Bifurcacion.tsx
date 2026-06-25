@@ -8,7 +8,7 @@ export function Bifurcacion() {
     >
       <div className="container-site">
         <div className="text-center mb-12">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             Diga lo que diga tu escritura
           </p>
           <h2
@@ -28,7 +28,7 @@ export function Bifurcacion() {
               aspectRatio="landscape"
             />
             <div className="p-6 lg:p-8">
-              <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+              <p className="section-label mb-3">
                 Si llevas años aquí
               </p>
               <h3 className="text-xl font-serif font-semibold text-avade-marron-profundo mb-4">
@@ -57,7 +57,7 @@ export function Bifurcacion() {
               aspectRatio="landscape"
             />
             <div className="p-6 lg:p-8">
-              <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+              <p className="section-label mb-3">
                 Si acabas de llegar
               </p>
               <h3 className="text-xl font-serif font-semibold text-avade-marron-profundo mb-4">

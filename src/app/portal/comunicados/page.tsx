@@ -33,7 +33,7 @@ export default async function PortalComunicadosPage() {
                 id={com.id}
                 className="bg-white border border-avade-beige rounded-sm p-6 lg:p-8"
               >
-                <time className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-2 block">
+                <time className="text-sm font-sans font-semibold text-avade-marron-profundo uppercase tracking-widest mb-2 block">
                   {formatDate(com.fecha)}
                 </time>
                 <h2 className="text-xl font-serif font-semibold text-avade-marron-profundo mb-4">
@@ -49,10 +49,10 @@ export default async function PortalComunicadosPage() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-lg text-avade-taupe font-serif">
+            <p className="text-lg text-avade-marron-oscuro font-serif">
               No hay comunicados todavía.
             </p>
-            <p className="text-sm text-avade-taupe mt-2">
+            <p className="text-sm text-avade-marron-oscuro mt-2">
               Los comunicados se publican desde el panel de Supabase (tabla <code>comunicados</code>).
             </p>
           </div>

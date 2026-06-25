@@ -51,7 +51,7 @@ export function QueHacemos() {
     >
       <div className="container-site">
         <div className="max-w-2xl mb-12">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-4">
+          <p className="section-label mb-4">
             Nuestro trabajo
           </p>
           <h2
@@ -80,7 +80,7 @@ export function QueHacemos() {
                 <h3 className="text-lg font-serif font-semibold text-avade-marron-profundo mb-2">
                   {accion.titulo}
                 </h3>
-                <p className="text-sm text-avade-marron-oscuro leading-relaxed">
+                <p className="text-base text-avade-marron-oscuro leading-relaxed">
                   {accion.texto}
                 </p>
               </div>

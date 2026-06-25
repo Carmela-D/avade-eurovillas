@@ -23,7 +23,7 @@ export default function QuienesSomosPage() {
       {/* Hero de sección */}
       <div className="bg-avade-beige section-padding-sm border-b border-avade-taupe">
         <div className="container-site">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             La plataforma
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-semibold text-avade-marron-profundo mb-4">
@@ -85,8 +85,8 @@ export default function QuienesSomosPage() {
                     <li key={p.titulo} className="flex gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-avade-verde-oscuro flex-shrink-0 mt-2.5" aria-hidden="true" />
                       <div>
-                        <span className="text-sm font-semibold text-avade-marron-profundo">{p.titulo}: </span>
-                        <span className="text-sm text-avade-marron-oscuro">{p.texto}</span>
+                        <span className="text-base font-semibold text-avade-marron-profundo">{p.titulo}: </span>
+                        <span className="text-base text-avade-marron-oscuro">{p.texto}</span>
                       </div>
                     </li>
                   ))}
@@ -107,14 +107,14 @@ export default function QuienesSomosPage() {
                       >
                         {idx + 1}.
                       </span>
-                      <p className="text-sm text-avade-marron-oscuro leading-relaxed">{fin}</p>
+                      <p className="text-base text-avade-marron-oscuro leading-relaxed">{fin}</p>
                     </li>
                   ))}
                 </ol>
               </div>
 
               <div className="bg-avade-beige rounded-sm p-4">
-                <p className="text-xs text-avade-taupe leading-relaxed">
+                <p className="text-sm text-avade-marron-oscuro leading-relaxed">
                   <strong className="text-avade-marron-oscuro">Nota sobre datos personales:</strong>{" "}
                   En esta web no publicamos datos personales de ningún miembro de
                   la plataforma. Tampoco publicamos firmas, DNIs ni datos de
@@ -140,7 +140,7 @@ export default function QuienesSomosPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
                 </svg>
                 <div>
-                  <p className="text-xs font-sans font-semibold text-avade-taupe uppercase tracking-widest mb-0.5">
+                  <p className="text-sm font-sans font-semibold text-avade-marron-profundo uppercase tracking-widest mb-0.5">
                     Email directo
                   </p>
                   <a

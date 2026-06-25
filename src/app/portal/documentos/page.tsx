@@ -37,7 +37,7 @@ export default async function PortalDocumentosPage() {
                       {doc.tipo}
                     </Badge>
                   </div>
-                  <time className="text-xs text-avade-taupe">
+                  <time className="text-sm text-avade-marron-oscuro">
                     {new Date(doc.fecha).toLocaleDateString("es-ES", {
                       day: "numeric",
                       month: "long",
@@ -60,10 +60,10 @@ export default async function PortalDocumentosPage() {
           </div>
         ) : (
           <div className="text-center py-16">
-            <p className="text-lg text-avade-taupe font-serif">
+            <p className="text-lg text-avade-marron-oscuro font-serif">
               No hay documentos disponibles todavía.
             </p>
-            <p className="text-sm text-avade-taupe mt-2">
+            <p className="text-sm text-avade-marron-oscuro mt-2">
               Los documentos se añaden desde el panel de Supabase.
             </p>
           </div>

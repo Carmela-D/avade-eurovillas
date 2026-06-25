@@ -16,7 +16,7 @@ export default function BlogPage() {
     <PublicLayout>
       <div className="bg-avade-casi-blanco section-padding-sm border-b border-avade-beige">
         <div className="container-site">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             Novedades y análisis
           </p>
           <h1 className="text-4xl md:text-5xl font-serif font-semibold text-avade-marron-profundo mb-4">
@@ -34,10 +34,10 @@ export default function BlogPage() {
         <div className="container-site">
           {posts.length === 0 ? (
             <div className="text-center py-16">
-              <p className="text-lg text-avade-taupe font-serif">
+              <p className="text-lg text-avade-marron-oscuro font-serif">
                 Próximamente, las primeras entradas del blog.
               </p>
-              <p className="text-base text-avade-taupe mt-2">
+              <p className="text-base text-avade-marron-oscuro mt-2">
                 Suscríbete para recibir las novedades en tu email.
               </p>
               <div className="mt-6">
@@ -58,7 +58,7 @@ export default function BlogPage() {
                       {post.frontmatter.tags?.map((tag) => (
                         <span
                           key={tag}
-                          className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest"
+                          className="text-sm font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest"
                         >
                           {tag}
                         </span>
@@ -70,7 +70,7 @@ export default function BlogPage() {
                     <p className="text-base text-avade-marron-oscuro leading-relaxed mb-4">
                       {post.frontmatter.excerpt}
                     </p>
-                    <div className="flex items-center gap-4 text-sm text-avade-taupe">
+                    <div className="flex items-center gap-4 text-sm text-avade-marron-oscuro">
                       <time dateTime={post.frontmatter.date}>
                         {formatDate(post.frontmatter.date)}
                       </time>

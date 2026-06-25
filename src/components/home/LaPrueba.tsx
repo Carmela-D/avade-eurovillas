@@ -125,7 +125,7 @@ export function LaPrueba() {
                         : ""
                     }`}
                   >
-                    <time className="text-sm font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest">
+                    <time className="text-base font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest">
                       {hito.año}
                     </time>
                     <h3 className="text-base font-serif font-semibold text-avade-marron-profundo mt-1 mb-2">

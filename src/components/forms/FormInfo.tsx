@@ -120,12 +120,12 @@ export function FormInfo() {
         <button
           type="submit"
           disabled={estado === "loading"}
-          className="btn-secondary w-full disabled:opacity-60 disabled:cursor-not-allowed"
+          className="btn-secondary w-full bg-white disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {estado === "loading" ? "Enviando…" : "Quiero más información"}
         </button>
 
-        <p className="text-xs text-avade-taupe text-center leading-relaxed">
+        <p className="text-sm text-avade-marron-oscuro text-center leading-relaxed">
           Solo usamos tu email para enviarte actualizaciones de la plataforma.
           Puedes darte de baja en cualquier momento.
         </p>

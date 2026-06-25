@@ -41,7 +41,7 @@ export function Transparencia() {
     >
       <div className="container-site">
         <div className="text-center mb-12">
-          <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-3">
+          <p className="section-label mb-3">
             Con los datos sobre la mesa
           </p>
           <h2
@@ -71,14 +71,14 @@ export function Transparencia() {
               </p>
               <p
                 className={`text-sm font-sans font-semibold mt-2 ${
-                  dato.marcado ? "text-avade-beige" : "text-avade-marron-oscuro"
+                  dato.marcado ? "text-white" : "text-avade-marron-oscuro"
                 }`}
               >
                 {dato.label}
               </p>
               <p
-                className={`text-xs mt-1 ${
-                  dato.marcado ? "text-avade-verde-claro" : "text-avade-taupe"
+                className={`text-sm mt-1 ${
+                  dato.marcado ? "text-avade-casi-blanco" : "text-avade-marron-oscuro"
                 }`}
               >
                 {dato.nota}
@@ -87,7 +87,7 @@ export function Transparencia() {
           ))}
         </div>
 
-        <p className="text-center mt-8 text-xs font-sans text-avade-taupe">
+        <p className="text-center mt-8 text-sm font-sans text-avade-marron-oscuro">
           Las cifras de adhesiones se actualizarán aquí cuando la plataforma las
           facilite. Los demás datos son de fuentes públicas contrastadas.
         </p>

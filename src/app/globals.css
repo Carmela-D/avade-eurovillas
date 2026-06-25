@@ -88,7 +88,7 @@
 
   /* Etiquetas decorativas de sección (ej: "El problema en 60 segundos") */
   .section-label {
-    @apply text-sm font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest;
+    @apply text-sm font-sans font-semibold text-avade-marron-profundo uppercase tracking-widest;
   }
 
   /* Buttons — padding explícito para targets táctiles amplios */

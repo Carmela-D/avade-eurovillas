@@ -49,7 +49,7 @@ export function ElProblema() {
               <p className="text-base font-sans text-avade-marron-oscuro">
                 IBI → ayuntamiento → servicios municipales
               </p>
-              <p className="mt-3 text-base text-avade-verde-oscuro font-semibold">
+              <p className="mt-3 text-base text-avade-marron-profundo font-semibold">
                 ✓ Un solo pago
               </p>
             </div>

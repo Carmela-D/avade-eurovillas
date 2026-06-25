@@ -38,7 +38,7 @@ export default async function BlogPostPage({ params }: Props) {
     <PublicLayout>
       <div className="section-padding bg-avade-casi-blanco">
         <div className="container-site max-w-3xl">
-          <nav className="text-sm font-sans text-avade-taupe mb-8" aria-label="Ruta de navegación">
+          <nav className="text-sm font-sans text-avade-marron-oscuro mb-8" aria-label="Ruta de navegación">
             <Link href="/blog" className="hover:text-avade-verde-oscuro transition-colors no-underline">
               Blog
             </Link>
@@ -51,7 +51,7 @@ export default async function BlogPostPage({ params }: Props) {
               {post.frontmatter.tags?.map((tag) => (
                 <span
                   key={tag}
-                  className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest"
+                  className="text-sm font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest"
                 >
                   {tag}
                 </span>
@@ -63,7 +63,7 @@ export default async function BlogPostPage({ params }: Props) {
             <p className="text-xl text-avade-marron-oscuro leading-relaxed mb-6">
               {post.frontmatter.excerpt}
             </p>
-            <div className="flex items-center gap-4 text-sm text-avade-taupe border-t border-avade-beige pt-4">
+            <div className="flex items-center gap-4 text-sm text-avade-marron-oscuro border-t border-avade-beige pt-4">
               <time dateTime={post.frontmatter.date}>
                 {formatDate(post.frontmatter.date)}
               </time>
@@ -89,7 +89,7 @@ export default async function BlogPostPage({ params }: Props) {
                 Suscríbete para recibir las actualizaciones importantes directamente en tu email.
               </p>
               <div className="flex gap-3">
-                <Link href="/#info" className="btn-secondary btn-sm">
+                <Link href="/#info" className="btn-secondary btn-sm bg-white">
                   Suscribirme
                 </Link>
                 <Link href="/hazte-socio" className="btn-primary btn-sm">

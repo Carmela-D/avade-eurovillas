@@ -16,7 +16,7 @@ export default function HazteSocioPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Copy */}
             <div>
-              <p className="text-xs font-sans font-semibold text-avade-verde-oscuro uppercase tracking-widest mb-4">
+              <p className="section-label mb-4">
                 Adherirse a la plataforma
               </p>
               <h1 className="text-4xl md:text-5xl font-serif font-semibold text-avade-marron-profundo mb-6 text-balance">
@@ -48,7 +48,7 @@ export default function HazteSocioPage() {
                     "Estado actualizado de todos los procesos activos",
                     "Posibilidad de participar activamente si quieres",
                   ].map((item) => (
-                    <li key={item} className="flex items-start gap-3 text-sm text-avade-marron-oscuro">
+                    <li key={item} className="flex items-start gap-3 text-base text-avade-marron-oscuro">
                       <svg
                         className="w-4 h-4 text-avade-verde-oscuro flex-shrink-0 mt-0.5"
                         fill="currentColor"
@@ -69,10 +69,10 @@ export default function HazteSocioPage() {
 
               {/* Lo que no se pide */}
               <div className="mt-6 border-l-4 border-avade-verde-oscuro pl-4">
-                <p className="text-sm text-avade-marron-oscuro font-semibold mb-1">
+                <p className="text-base text-avade-marron-oscuro font-semibold mb-1">
                   Lo que no se pide
                 </p>
-                <p className="text-sm text-avade-marron-oscuro">
+                <p className="text-base text-avade-marron-oscuro">
                   Sin cuotas de socio. Sin obligación de asistir a reuniones. Sin
                   compromisos de tiempo. Si en algún momento quieres implicarte
                   más, hay espacio; si no, con que estés sumado es suficiente.
@@ -80,7 +80,7 @@ export default function HazteSocioPage() {
               </div>
 
               <div className="mt-8 bg-avade-casi-blanco border border-avade-beige rounded-sm p-4">
-                <p className="text-xs text-avade-taupe font-sans">
+                <p className="text-sm text-avade-marron-oscuro font-sans">
                   ¿Todavía no estás seguro? Puedes{" "}
                   <a href="/#info" className="text-avade-verde-oscuro underline">
                     suscribirte para recibir información

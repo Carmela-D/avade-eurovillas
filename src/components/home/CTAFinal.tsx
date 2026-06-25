@@ -72,7 +72,7 @@ export function CTAFinal() {
 
           {/* Conversión fuerte */}
           <div className="bg-avade-marron-profundo rounded-sm p-8">
-            <p className="text-sm font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
+            <p className="text-base font-sans font-semibold text-avade-verde-claro uppercase tracking-widest mb-4">
               Opción 2 — El paso real
             </p>
             <h3 className="text-2xl font-serif font-semibold text-avade-casi-blanco mb-3">
