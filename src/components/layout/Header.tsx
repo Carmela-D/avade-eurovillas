@@ -14,8 +14,8 @@ export function Header() {
   return (
     <header className="sticky top-0 z-40 bg-avade-casi-blanco/95 backdrop-blur-sm border-b border-avade-beige">
       <div className="container-site">
-        <div className="flex items-center justify-between h-16 md:h-20">
-          <Logo size="sm" />
+        <div className="flex items-center justify-between h-20 md:h-24">
+          <Logo size="md" />
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex items-center gap-6" aria-label="Navegación principal">

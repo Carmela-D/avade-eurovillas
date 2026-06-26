@@ -11,6 +11,7 @@ const footerLinks = {
   ],
   accion: [
     { href: "/hazte-socio", label: "Hazte socio" },
+    { href: "/lp", label: "¿Eres vecino? Infórmate aquí" },
     { href: "/#info", label: "Quiero más información" },
     { href: "/quienes-somos#contacto", label: "Contacto" },
   ],

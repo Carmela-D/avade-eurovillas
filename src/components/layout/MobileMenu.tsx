@@ -18,11 +18,16 @@ export function MobileMenu() {
 
   useEffect(() => {
     if (open) {
+      // iOS Safari ignores overflow:hidden on body alone —
+      // locking both html and body prevents the page from scrolling behind the overlay
+      document.documentElement.style.overflow = "hidden";
       document.body.style.overflow = "hidden";
     } else {
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     }
     return () => {
+      document.documentElement.style.overflow = "";
       document.body.style.overflow = "";
     };
   }, [open]);
@@ -31,14 +36,14 @@ export function MobileMenu() {
     <>
       <button
         onClick={() => setOpen(!open)}
-        className="md:hidden p-2 text-avade-marron-profundo hover:text-avade-verde-oscuro transition-colors"
+        className="md:hidden flex items-center justify-center w-11 h-11 text-avade-marron-profundo hover:text-avade-verde-oscuro hover:bg-avade-beige rounded-sm transition-colors"
         aria-expanded={open}
         aria-controls="mobile-menu"
         aria-label={open ? "Cerrar menú" : "Abrir menú"}
       >
         <svg
-          width="24"
-          height="24"
+          width="28"
+          height="28"
           fill="none"
           viewBox="0 0 24 24"
           stroke="currentColor"
