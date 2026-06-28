@@ -93,15 +93,18 @@
 
   /* Buttons — padding explícito para targets táctiles amplios */
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-avade-verde-oscuro text-white font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-150 hover:bg-avade-marron-oscuro hover:border-avade-marron-oscuro hover:scale-105 active:scale-95 active:bg-avade-marron-profundo focus-visible:outline-avade-verde-oscuro no-underline;
+    -webkit-tap-highlight-color: transparent;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-avade-verde-oscuro text-white font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-150 hover:bg-avade-marron-oscuro hover:border-avade-marron-oscuro hover:text-white hover:scale-105 active:scale-95 active:bg-avade-marron-profundo active:text-white focus-visible:outline-avade-verde-oscuro no-underline;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-avade-verde-oscuro font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-150 hover:bg-avade-verde-oscuro hover:text-white hover:scale-105 active:scale-95 focus-visible:outline-avade-verde-oscuro no-underline;
+    -webkit-tap-highlight-color: transparent;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-avade-verde-oscuro font-sans font-semibold text-base rounded-sm border-2 border-avade-verde-oscuro transition-all duration-150 hover:bg-avade-verde-oscuro hover:text-white hover:scale-105 active:scale-95 active:text-white focus-visible:outline-avade-verde-oscuro no-underline;
   }
 
   .btn-outline-light {
-    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-avade-casi-blanco font-sans font-semibold text-base rounded-sm border-2 border-avade-casi-blanco transition-all duration-150 hover:bg-avade-casi-blanco hover:text-avade-marron-profundo hover:scale-105 active:scale-95 focus-visible:outline-white no-underline;
+    -webkit-tap-highlight-color: transparent;
+    @apply inline-flex items-center justify-center gap-2 px-7 py-3.5 bg-transparent text-avade-casi-blanco font-sans font-semibold text-base rounded-sm border-2 border-avade-casi-blanco transition-all duration-150 hover:bg-avade-casi-blanco hover:text-avade-marron-profundo hover:scale-105 active:scale-95 active:text-avade-marron-profundo focus-visible:outline-white no-underline;
   }
 
   .btn-sm {
