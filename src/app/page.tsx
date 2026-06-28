@@ -16,9 +16,9 @@ export default function HomePage() {
     <div className="min-h-screen bg-white">
 
       {/* ── HEADER ── */}
-      <header className="bg-white border-b-2 border-avade-beige py-6 md:py-8">
+      <header className="bg-white border-b-2 border-avade-beige py-8 md:py-10">
         <div className="container-site flex justify-center">
-          <Logo size="lg" />
+          <Logo size="xl" />
         </div>
       </header>
 

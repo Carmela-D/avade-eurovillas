@@ -3,13 +3,14 @@ import Image from "next/image";
 
 interface LogoProps {
   variant?: "dark" | "light";
-  size?: "sm" | "md" | "lg";
+  size?: "sm" | "md" | "lg" | "xl";
 }
 
 const sizes = {
   sm: { width: 120, height: 48 },
   md: { width: 150, height: 60 },
-  lg: { width: 190, height: 76 },
+  lg: { width: 240, height: 96 },
+  xl: { width: 320, height: 128 },
 };
 
 export function Logo({ variant = "dark", size = "md" }: LogoProps) {
