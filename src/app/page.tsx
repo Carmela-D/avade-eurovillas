@@ -82,28 +82,28 @@ export default function HomePage() {
         {/* ── CIFRAS ── */}
         <section className="bg-avade-casi-blanco py-14 border-b-2 border-avade-beige">
           <div className="container-site max-w-3xl mx-auto">
-            <div className="grid grid-cols-3 gap-6 text-center">
-              <div>
-                <p className="text-4xl md:text-5xl font-serif font-bold text-avade-marron-profundo">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-6 text-center">
+              <div className="border-b-2 border-avade-beige pb-10 sm:border-b-0 sm:pb-0">
+                <p className="text-5xl md:text-5xl font-serif font-bold text-avade-marron-profundo">
                   ~4.000
                 </p>
-                <p className="text-lg md:text-xl text-avade-marron-oscuro mt-3 leading-snug">
+                <p className="text-xl text-avade-marron-oscuro mt-3 leading-snug">
                   parcelas afectadas
                 </p>
               </div>
-              <div>
-                <p className="text-4xl md:text-5xl font-serif font-bold text-avade-marron-profundo">
+              <div className="border-b-2 border-avade-beige pb-10 sm:border-b-0 sm:pb-0">
+                <p className="text-5xl md:text-5xl font-serif font-bold text-avade-marron-profundo">
                   ~12.000
                 </p>
-                <p className="text-lg md:text-xl text-avade-marron-oscuro mt-3 leading-snug">
+                <p className="text-xl text-avade-marron-oscuro mt-3 leading-snug">
                   vecinos en Eurovillas
                 </p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-serif font-bold text-avade-verde-oscuro">
+                <p className="text-5xl md:text-5xl font-serif font-bold text-avade-verde-oscuro">
                   58 años
                 </p>
-                <p className="text-lg md:text-xl text-avade-marron-oscuro mt-3 leading-snug">
+                <p className="text-xl text-avade-marron-oscuro mt-3 leading-snug">
                   pagando lo mismo dos veces
                 </p>
               </div>
