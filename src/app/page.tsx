@@ -191,35 +191,70 @@ export default function HomePage() {
 
             <div className="space-y-5 text-xl text-avade-marron-oscuro leading-relaxed">
               <p>
-                La plataforma vecinal Adelante Eurovillas ha hecho pública y ha
-                comunicado hoy a la prensa una iniciativa formal orientada a la
-                normalización de los servicios básicos y a la recepción definitiva
-                de la urbanización por parte de los ayuntamientos de Nuevo Baztán
-                y Villar del Olmo.
+                <strong>Madrid, 29 de junio de 2026:</strong> Propietarios de la
+                urbanización más grande de Europa —Eurovillas, ubicada en los
+                municipios de Nuevo Baztán y Villar del Olmo, cuyos orígenes se
+                remontan al año 1968— ha iniciado una ofensiva legal e
+                institucional definitiva. Los propietarios organizados bajo la
+                plataforma vecinal <strong>Adelante Eurovillas</strong> han
+                registrado dos escritos formales ante ambos Ayuntamientos para
+                exigir la <strong>recepción de la urbanización</strong>, la{" "}
+                <strong>disolución de la Entidad de Conservación</strong> y el{" "}
+                <strong>cese inmediato del pago de las cuotas</strong>{" "}
+                obligatorias. Asimismo, en fecha de 8 de enero de 2026,
+                presentaron recurso de alzada ante la Consejería de Medio
+                Ambiente, Agricultura e Interior de la Comunidad de Madrid,
+                contra los actos del Consejo Rector de la Entidad Urbanística de
+                Conservación de Eurovillas.
               </p>
               <p>
-                Esta propuesta constructiva, que cuenta con el firme respaldo
-                institucional del Defensor del Pueblo, busca resolver una situación
-                provisional que se prolonga desde 1968.
+                Esta contundente reclamación administrativa llega firmemente
+                avalada por un{" "}
+                <strong>
+                  informe favorable del Defensor del Pueblo de España
+                </strong>{" "}
+                a instancia de un propietario de la urbanización. La institución
+                estatal ha dictaminado la necesidad de resolver de una vez por
+                todas una situación de provisionalidad anacrónica que se prolonga
+                ya durante 58 años, vulnerando los derechos de los propietarios.
               </p>
               <p>
-                Con la difusión de este comunicado, los representantes vecinales
-                trasladan a la opinión pública y a las administraciones la necesidad
-                de coordinar de oficio la recepción de las infraestructuras,
-                garantizando una gestión municipal transparente y equitativa para
-                sus 12.000 vecinos.
+                La situación afecta a{" "}
+                <strong>casi 4.000 parcelas y cerca de 12.000 vecinos</strong>,
+                lo que convierte a este conflicto urbanístico en uno de los más
+                multitudinarios y longevos de toda la Comunidad de Madrid. El
+                colectivo de afectados denuncia una flagrante situación de{" "}
+                <em>"doble imposición"</em>: los residentes abonan
+                religiosamente sus impuestos locales (como el IBI, tasas
+                municipales, etc.), pero a la vez se ven obligados a financiar a
+                través de una entidad privada de adscripción obligatoria el
+                alumbrado público, el saneamiento, limpieza de viales,
+                jardinería y la seguridad de unos viales que deberían ser de uso
+                y mantenimiento estrictamente público.
+              </p>
+              <p>
+                A raíz del amparo del Defensor del Pueblo, el escrito emplaza
+                formalmente a las tres administraciones públicas implicadas
+                (Comunidad de Madrid y ayuntamientos de Nuevo Baztán y Villar
+                del Olmo) a asumir sus competencias legales compartidas y a
+                coordinarse para poner fin a este abuso de derecho. La
+                jurisprudencia española determina de forma unánime que las
+                entidades de conservación no pueden perpetuarse indefinidamente
+                una vez que el suelo está completamente consolidado,
+                consolidación que en Eurovillas es una realidad evidente desde
+                hace décadas.
               </p>
             </div>
 
             <div className="mt-10 bg-white border border-avade-taupe rounded-sm p-7 space-y-4">
               <p className="text-base font-sans font-semibold text-avade-marron-profundo uppercase tracking-widest mb-2">
-                Lo que pedimos formalmente
+                Mediante estos escritos, los afectados solicitan formalmente:
               </p>
               <div className="space-y-3">
                 {[
                   "La recepción de oficio coordinada de todas las infraestructuras, viales y espacios públicos de la urbanización por parte de los ayuntamientos de Nuevo Baztán y Villar del Olmo.",
                   "La disolución legal y liquidación inmediata de la Entidad de Conservación.",
-                  "La suspensión definitiva del pago de cuotas por parte de los propietarios, pasando a ser los servicios asumidos por las arcas municipales.",
+                  "La suspensión definitiva del pago de cuotas por parte de los propietarios, pasando a ser los servicios asumidos por las arcas municipales y el respaldo de la administración regional.",
                 ].map((item, i) => (
                   <div key={i} className="flex gap-4 items-start">
                     <span className="text-avade-verde-oscuro font-serif text-2xl font-bold flex-shrink-0 leading-tight">
@@ -234,15 +269,42 @@ export default function HomePage() {
             </div>
 
             <p className="mt-8 text-lg text-avade-marron-oscuro leading-relaxed">
-              La representación de los vecinos advierte de que, si los
-              ayuntamientos y la Comunidad de Madrid continúan ignorando el
-              dictamen del Defensor del Pueblo, el colectivo vecinal emprenderá{" "}
+              La representación de los vecinos advierte de que, tras el rotundo
+              espaldarazo de la máxima institución de derechos ciudadanos del
+              país, no cejarán en su empeño. Si los ayuntamientos implicados y
+              la Comunidad de Madrid persisten en su inacción y continúan
+              ignorando el dictamen del Defensor del Pueblo, el colectivo
+              vecinal emprenderá{" "}
               <strong>
-                acciones judiciales por la vía contencioso-administrativa
+                acciones judiciales masivas por la vía contencioso-administrativa
               </strong>
               , exigiendo además responsabilidades patrimoniales por los
-              perjuicios causados durante décadas.
+              perjuicios causados durante años.
             </p>
+
+            <div className="mt-8 pt-8 border-t border-avade-taupe">
+              <p className="text-base font-sans font-semibold text-avade-marron-profundo mb-2">
+                Para más información o gestión de entrevistas:
+              </p>
+              <p className="text-lg text-avade-marron-oscuro">
+                Correo electrónico:{" "}
+                <a
+                  href="mailto:informacion@avade.org"
+                  className="text-avade-verde-oscuro underline"
+                >
+                  informacion@avade.org
+                </a>
+              </p>
+              <p className="text-lg text-avade-marron-oscuro">
+                Web:{" "}
+                <a
+                  href="https://avade.org"
+                  className="text-avade-verde-oscuro underline"
+                >
+                  avade.org
+                </a>
+              </p>
+            </div>
           </div>
         </section>
 
