@@ -73,7 +73,7 @@ export default function HomePage() {
                 Quiero que me contacten →
               </a>
               <p className="mt-5 text-xl text-avade-taupe">
-                Es gratis. Sin compromisos.
+                Déjanos tus datos y un vecino de Eurovillas te llama.
               </p>
             </div>
           </div>
@@ -162,31 +162,87 @@ export default function HomePage() {
         </div>
 
         {/* ── NOTA DE PRENSA ── */}
-        {/* PLACEHOLDER: reemplazar con el texto real de la nota de prensa cuando esté disponible */}
         <section className="py-16 md:py-20 bg-avade-beige">
           <div className="container-site max-w-3xl mx-auto">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-avade-verde-oscuro rounded-sm mb-8">
               <span className="text-sm font-sans font-bold text-white uppercase tracking-widest">
-                Nota de prensa — junio 2026
+                Nota de prensa — 29 de junio de 2026
               </span>
             </div>
-            <h2 className="text-3xl md:text-4xl font-serif font-semibold text-avade-marron-profundo mb-6">
-              {/* TODO: título de la nota de prensa */}
-              Nueva iniciativa vecinal en Eurovillas
+
+            <h2 className="text-3xl md:text-4xl font-serif font-semibold text-avade-marron-profundo mb-6 text-balance">
+              El Defensor del Pueblo ampara a 12.000 vecinos de Nuevo Baztán y
+              Villar del Olmo: exigen recibir la urbanización de Eurovillas y
+              disolver la Entidad de Conservación tras 58 años de abandono
             </h2>
+
+            <ul className="space-y-3 mb-10 border-l-4 border-avade-verde-oscuro pl-6">
+              <li className="text-lg md:text-xl text-avade-marron-oscuro leading-relaxed font-semibold">
+                Presentado un escrito formal ante ambos Ayuntamientos y la
+                Comunidad de Madrid para exigir el fin inmediato del cobro de
+                cuotas.
+              </li>
+              <li className="text-lg md:text-xl text-avade-marron-oscuro leading-relaxed font-semibold">
+                Casi 4.000 parcelas sufren una doble imposición histórica,
+                costeando de su bolsillo servicios básicos que los consistorios
+                eluden asumir desde 1968.
+              </li>
+            </ul>
+
             <div className="space-y-5 text-xl text-avade-marron-oscuro leading-relaxed">
-              {/* TODO: cuerpo de la nota de prensa */}
               <p>
-                La Plataforma Adelante Eurovillas (AVADE) anuncia el lanzamiento de
-                una nueva fase de movilización vecinal para exigir la recepción
-                municipal completa de la urbanización y la disolución de la EUCE.
+                La plataforma vecinal Adelante Eurovillas ha hecho pública y ha
+                comunicado hoy a la prensa una iniciativa formal orientada a la
+                normalización de los servicios básicos y a la recepción definitiva
+                de la urbanización por parte de los ayuntamientos de Nuevo Baztán
+                y Villar del Olmo.
               </p>
               <p>
-                Con el respaldo formal del Defensor del Pueblo de España, la
-                plataforma busca sumar al mayor número posible de vecinos para
-                reforzar su posición ante las administraciones públicas.
+                Esta propuesta constructiva, que cuenta con el firme respaldo
+                institucional del Defensor del Pueblo, busca resolver una situación
+                provisional que se prolonga desde 1968.
+              </p>
+              <p>
+                Con la difusión de este comunicado, los representantes vecinales
+                trasladan a la opinión pública y a las administraciones la necesidad
+                de coordinar de oficio la recepción de las infraestructuras,
+                garantizando una gestión municipal transparente y equitativa para
+                sus 12.000 vecinos.
               </p>
             </div>
+
+            <div className="mt-10 bg-white border border-avade-taupe rounded-sm p-7 space-y-4">
+              <p className="text-base font-sans font-semibold text-avade-marron-profundo uppercase tracking-widest mb-2">
+                Lo que pedimos formalmente
+              </p>
+              <div className="space-y-3">
+                {[
+                  "La recepción de oficio coordinada de todas las infraestructuras, viales y espacios públicos de la urbanización por parte de los ayuntamientos de Nuevo Baztán y Villar del Olmo.",
+                  "La disolución legal y liquidación inmediata de la Entidad de Conservación.",
+                  "La suspensión definitiva del pago de cuotas por parte de los propietarios, pasando a ser los servicios asumidos por las arcas municipales.",
+                ].map((item, i) => (
+                  <div key={i} className="flex gap-4 items-start">
+                    <span className="text-avade-verde-oscuro font-serif text-2xl font-bold flex-shrink-0 leading-tight">
+                      {i + 1}.
+                    </span>
+                    <p className="text-lg md:text-xl text-avade-marron-oscuro leading-relaxed">
+                      {item}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="mt-8 text-lg text-avade-marron-oscuro leading-relaxed">
+              La representación de los vecinos advierte de que, si los
+              ayuntamientos y la Comunidad de Madrid continúan ignorando el
+              dictamen del Defensor del Pueblo, el colectivo vecinal emprenderá{" "}
+              <strong>
+                acciones judiciales por la vía contencioso-administrativa
+              </strong>
+              , exigiendo además responsabilidades patrimoniales por los
+              perjuicios causados durante décadas.
+            </p>
           </div>
         </section>
 
@@ -199,11 +255,11 @@ export default function HomePage() {
               Súmate ahora.
             </h2>
             <p className="text-2xl text-avade-beige mb-12 leading-relaxed">
-              Solo tienes que dejar tu nombre y cómo contactarte. Nosotros te
-              llamamos o escribimos. Sin papeleos. Sin cuotas. Sin nada.
+              Déjanos tu nombre y cómo contactarte. Un vecino de Eurovillas
+              te llama para contarte todo, a tu ritmo.
             </p>
             <a href={CONTACTO_URL} className="btn-outline-light text-2xl px-12 py-6">
-              Déjame mis datos →
+              Quiero que me contacten →
             </a>
           </div>
         </section>
@@ -229,9 +285,9 @@ export default function HomePage() {
             <div className="space-y-8">
               {[
                 {
-                  titulo: "Es completamente gratis",
+                  titulo: "Un vecino te llama",
                   texto:
-                    "Sin cuotas, sin derramas, sin ningún compromiso económico. Cero.",
+                    "No recibirás un correo automático. Te llamará una persona de Eurovillas para hablar contigo y explicarte todo tranquilamente.",
                 },
                 {
                   titulo: "No tienes que ir a ninguna reunión",
@@ -287,7 +343,7 @@ export default function HomePage() {
               Quiero que me contacten →
             </a>
             <p className="mt-8 text-xl text-avade-taupe">
-              Es gratis. Sin compromisos. Solo una conversación de vecino a vecino.
+              Déjanos tus datos y un vecino de Eurovillas te llama.
             </p>
           </div>
         </section>
