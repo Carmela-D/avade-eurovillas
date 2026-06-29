@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Los vecinos de Eurovillas llevamos décadas pagando el IBI y además una cuota privada por los mismos servicios. El Defensor del Pueblo nos da la razón. Infórmate.",
 };
 
-const CONTACTO_URL = "https://avade.org/contacto/";
+const CONTACTO_URL = "https://forms.gle/jWKBwf5AKg1SwUn46";
 
 export default function HomePage() {
   return (
