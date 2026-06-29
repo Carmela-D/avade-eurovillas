@@ -1,101 +1,44 @@
 import type { Metadata } from "next";
-import { PublicLayout } from "@/components/layout/PublicLayout";
+import { Logo } from "@/components/ui";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Aviso legal",
-  robots: { index: false },
+  title: "Aviso legal — Adelante Eurovillas",
 };
 
 export default function AvisoLegalPage() {
   return (
-    <PublicLayout>
-      <div className="section-padding bg-avade-casi-blanco">
-        <div className="container-site max-w-3xl">
-          <div className="bg-amber-50 border border-amber-200 rounded-sm p-4 mb-8">
-            <p className="text-sm text-amber-800 font-semibold">
-              [BORRADOR — pendiente de revisión legal]
-            </p>
-            <p className="text-sm text-amber-700 mt-1">
-              Este texto es un borrador orientativo conforme a la LSSICE y la
-              normativa española vigente. Debe ser revisado por un profesional
-              antes de publicarse definitivamente.
-            </p>
-          </div>
+    <div className="min-h-screen bg-white flex flex-col">
+      <header className="bg-white border-b-2 border-avade-beige py-6">
+        <div className="container-site flex justify-center">
+          <Logo size="lg" />
+        </div>
+      </header>
 
-          <h1 className="text-4xl font-serif font-semibold text-avade-marron-profundo mb-8">
-            Aviso legal
-          </h1>
-
-          <div className="prose prose-avade prose-base space-y-6">
-            <section>
-              <h2>1. Titular del sitio web</h2>
-              <p>
-                El presente sitio web (avade.org) es titularidad de la
-                <strong> Plataforma Adelante Eurovillas (AVADE)</strong>, asociación
-                vecinal sin ánimo de lucro en proceso de constitución formal, con
-                domicilio en Eurovillas, municipios de Nuevo Baztán y Villar del
-                Olmo, Comunidad de Madrid.
-              </p>
-              <p>
-                Email de contacto:{" "}
-                <a href="mailto:informacion@avade.org">informacion@avade.org</a>
-              </p>
-            </section>
-
-            <section>
-              <h2>2. Objeto</h2>
-              <p>
-                Este sitio web tiene por objeto informar a los vecinos y
-                propietarios de Eurovillas sobre la situación de la urbanización,
-                los procesos en curso y la plataforma vecinal, así como facilitar
-                la adhesión a la misma.
-              </p>
-            </section>
-
-            <section>
-              <h2>3. Propiedad intelectual</h2>
-              <p>
-                Los textos, imágenes y contenidos de este sitio web son propiedad
-                de la Plataforma Adelante Eurovillas o se utilizan con
-                autorización de sus autores. Los documentos oficiales (sentencias,
-                publicaciones del BOCM, resoluciones del Defensor del Pueblo) son
-                de dominio público o se reproducen en el ejercicio del derecho de
-                información.
-              </p>
-              <p>
-                Se permite la reproducción parcial de los contenidos propios de
-                este sitio para uso informativo, citando la fuente.
-              </p>
-            </section>
-
-            <section>
-              <h2>4. Limitación de responsabilidad</h2>
-              <p>
-                La Plataforma Adelante Eurovillas no se hace responsable de los
-                daños o perjuicios derivados del uso del sitio web ni de la
-                información contenida en el mismo. Los contenidos se ofrecen con
-                carácter informativo y no constituyen asesoramiento jurídico.
-              </p>
-              <p>
-                Los documentos legales reproducidos en la Librería se ofrecen tal
-                cual, para consulta pública. En caso de duda sobre su aplicación
-                a situaciones particulares, se recomienda consultar con un
-                profesional.
-              </p>
-            </section>
-
-            <section>
-              <h2>5. Legislación aplicable</h2>
-              <p>
-                El presente aviso legal se rige por la legislación española
-                vigente, en particular por la Ley 34/2002 de Servicios de la
-                Sociedad de la Información (LSSICE) y el Reglamento General de
-                Protección de Datos (RGPD).
-              </p>
-            </section>
+      <main className="flex-1 flex flex-col">
+        <div className="container-site py-8">
+          <div className="flex items-center gap-4 mb-6">
+            <Link
+              href="/"
+              className="text-avade-verde-oscuro text-lg font-semibold no-underline hover:text-avade-marron-oscuro"
+            >
+              ← Volver
+            </Link>
+            <h1 className="text-2xl md:text-3xl font-serif font-semibold text-avade-marron-profundo">
+              Aviso legal
+            </h1>
           </div>
         </div>
-      </div>
-    </PublicLayout>
+
+        <div className="flex-1 w-full">
+          <iframe
+            src="/legal/aviso-legal.pdf#toolbar=0&navpanes=0&scrollbar=1&view=FitH"
+            className="w-full"
+            style={{ height: "calc(100vh - 180px)", minHeight: "600px", border: "none" }}
+            title="Aviso legal de Adelante Eurovillas"
+          />
+        </div>
+      </main>
+    </div>
   );
 }
